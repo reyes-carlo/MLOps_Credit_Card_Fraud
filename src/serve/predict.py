@@ -15,6 +15,9 @@
         # Contains class prediction
         # Also contains probability/confidence metric
             # Probability or how confident model is that data is fraud
+        # Return first before any logging or monitoring
+        # After prediction return
+            # Send input data + prediction to monitoring section
 
 # Validate Input Function
     # Recieves JSON file
@@ -43,3 +46,20 @@
     # If model doesn't load -> return error
     # If validation fails -> return error message
     # If prediction fails -> return error message
+
+# Monitoring Pipeline Function
+    # Update statistics
+        # Call metrics function
+    # Check for data drift
+        # Call drift function
+        # Current data and reference data as parameters
+    # Call alert function
+        # Drift flag and prediction stats as parameters
+        # Returns True/False
+
+    # Log prediction stats
+    # Log retraining_required flag
+    # Log drift flag
+
+    # If alert function returns True
+        # Trigger pipeline externally
