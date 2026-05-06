@@ -4,7 +4,7 @@
     # Compare distributions between current batch and reference (training) data
         # Reference data as stored training distribution stats
         # Loaded from saved artifact
-        # Saved as JSON artifact
+        # Training data stats as JSON artifact
             # Means, std, and distributions
             # Saved during training pipeline
             # Loaded in monitoring module
